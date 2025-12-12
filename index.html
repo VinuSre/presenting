@@ -2,110 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Vinu Sre – Online Library Project</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f5f5f5; color: #222; }
+    header { background: #222; color: #fff; padding: 1.5rem; text-align: center; }
+    header h1 { font-size: 2rem; margin-bottom: 0.4rem; }
+    header p { font-size: 0.95rem; opacity: 0.85; }
+    nav { background: #333; display: flex; justify-content: center; gap: 1rem; padding: 0.6rem; flex-wrap: wrap; }
+    nav a { color: #fff; text-decoration: none; font-size: 0.9rem; padding: 0.3rem 0.6rem; border-radius: 4px; }
+    nav a:hover { background: #555; }
+    main { max-width: 900px; margin: 1.5rem auto; padding: 0 1rem 2rem; }
+    section { background: #fff; padding: 1.2rem 1.4rem; margin-bottom: 1rem; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.06); }
+    section h2 { margin-bottom: 0.7rem; font-size: 1.3rem; }
+    .about p { margin-bottom: 0.5rem; }
+    .projects-list { list-style: none; }
+    .projects-list li { margin-bottom: 0.7rem; }
+    .projects-list h3 { font-size: 1rem; margin-bottom: 0.15rem; }
+    .projects-list p { font-size: 0.9rem; }
+    .skills-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .skills-list li { background: #e3e3e3; padding: 0.3rem 0.7rem; border-radius: 999px; font-size: 0.85rem; }
+    .contact p { margin-bottom: 0.3rem; font-size: 0.95rem; }
+    footer { text-align: center; padding: 1rem; font-size: 0.8rem; color: #666; }
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.6rem; }
+      section { padding: 1rem; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
-    <h1>Vinu Sre</h1>
-    <p>Advanced Programming – Online Library Project</p>
-    <nav>
-      <a href="#about">About Me</a> |
-      <a href="#project">Project</a> |
-      <a href="#tech">Technologies</a> |
-      <a href="#usage">How to Use</a> |
-      <a href="#contact">Contact</a>
-    </nav>
-    <hr>
+    <h1>Your Name</h1>
+    <p>Student • Aspiring Developer</p>
   </header>
 
-  <!-- About section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Student in the Advanced Programming course, learning Python, Flask, Git and web development.
-      This portfolio page presents my Online Library application and how it was developed.
-    </p>
-  </section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <!-- Project overview -->
-  <section id="project">
-    <h2>Online Library – Overview</h2>
-    <p>
-      The Online Library is a small web application that lets users manage a collection of media
-      items such as books and movies. Users can add new items, search by title or category, update
-      existing entries and delete items from the library.
-    </p>
-    <p>
-      The project follows a simple client–server architecture: a Flask backend exposes REST
-      endpoints and a web frontend (HTML, CSS and JavaScript) communicates with the backend using
-      HTTP requests.
-    </p>
-    <h3>Main features</h3>
-    <ul>
-      <li>Add media items with title, author, year, category and type.</li>
-      <li>Search and filter items using a search box and category selection.</li>
-      <li>Edit or delete existing items through the interface.</li>
-      <li>Data is stored on the server side in a separate storage module.</li>
-    </ul>
-  </section>
+  <main>
+    <section id="about" class="about">
+      <h2>About</h2>
+      <p>Write a short introduction about yourself here: what you study, what you enjoy, and what kind of work you want to do.</p>
+      <p>You can mention your university course, favourite technologies, or goals for the future.</p>
+    </section>
 
-  <!-- Technologies -->
-  <section id="tech">
-    <h2>Technologies and tools</h2>
-    <ul>
-      <li><strong>Python &amp; Flask</strong> – implement the web API for media management.</li>
-      <li><strong>HTML, CSS, JavaScript</strong> – build the user interface for the online library.</li>
-      <li><strong>Git, GitHub, SourceTree</strong> – version control and remote repository hosting.</li>
-      <li><strong>Visual Studio Code</strong> – main development environment.</li>
-    </ul>
-  </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul class="projects-list">
+        <li>
+          <h3>Project One</h3>
+          <p>Very short description of what this project does and what you learned from it.</p>
+        </li>
+        <li>
+          <h3>Project Two</h3>
+          <p>Another brief sentence or two about a different assignment or personal project.</p>
+        </li>
+      </ul>
+    </section>
 
-  <!-- How to run / use -->
-  <section id="usage">
-    <h2>How to run the project</h2>
-    <ol>
-      <li>Clone the repository from GitHub: <code>git clone https://github.com/VinuSre/OnlineLibrary.git</code></li>
-      <li>Open the project folder in Visual Studio Code.</li>
-      <li>Install required Python packages (for example Flask) in a virtual environment.</li>
-      <li>Start the backend server by running <code>backend.py</code>.</li>
-      <li>Open the <code>index.html</code> page in a browser to access the Online Library interface.</li>
-    </ol>
-    <p>
-      While developing, the application runs on <code>http://127.0.0.1:5000/</code>. For other
-      devices on the same network, the server can be started with host <code>0.0.0.0</code> and
-      accessed via the laptop’s local IP address.
-    </p>
-  </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
 
-  <!-- Reflection -->
-  <section id="reflection">
-    <h2>What I learned</h2>
-    <ul>
-      <li>Designing and implementing a REST-style backend in Flask.</li>
-      <li>Connecting a JavaScript frontend to a Python API using HTTP requests.</li>
-      <li>Using Git and GitHub for version control, including commits, branches and pushes.</li>
-      <li>Debugging common issues such as CORS errors, wrong routes or missing dependencies.</li>
-    </ul>
-  </section>
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>GitHub: <a href="https://github.com/VinuSre/OnlineLibrary.git">github.com/VinuSre</a></p>
+    </section>
+  </main>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      GitHub repository:
-      <a href="https://github.com/VinuSre/OnlineLibrary" target="_blank">
-        github.com/VinuSre/OnlineLibrary
-      </a>
-    </p>
-    <p>Email: vinusre.gayathri2006@gmail.com</p>
-  </section>
-
-  <hr>
   <footer>
-    <p>&copy; 2025 Vinu Sre – Online Library Project Portfolio</p>
+    © 2025 Vinu Sre Karthikeyan Gayathri
   </footer>
 
 </body>
